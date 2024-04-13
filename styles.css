@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+    /* Primary color */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral color */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.container {
+    background-color: var(--White);
+    width: 375px;
+    margin: auto;
+}
+
+.content {
+    margin: 20px 25px 20px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--Charcoal-Grey);
+}
+
+p {
+    color: var(--Charcoal-Grey);
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.about {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about img {
+    padding-right: 20px;
+}
+
+form {
+    margin-top: 40px;
+}
+
+#email-label{
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--Dark-Slate-Grey);
+}
+
+form span {
+    font-size: 12px;
+    margin-left: 100px;
+}
+
+#email-error {
+    color: var(--Tomato);
+    display: inline;
+}
+
+form input {
+    width: 320px;
+    padding: 15px;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+form #button {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form #button:hover {
+    background-color: var(--Tomato);
+    color: var(--White);
+}
+
+/* Thank you page */
+.thank-you-container {
+    padding: 100px 25px 30px;
+    width: 375px;
+    margin: auto;
+}
+
+.thank-you-container h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1;
+    color: var(--Dark-Slate-Grey);
+}
+
+span {
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+}
+
+.thank-you-container button {
+    width: 320px;
+    padding: 15px;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    margin-top: 180px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-container button:hover {
+    background-color: var(--Tomato);
+    color: var(--White);
+}
+
+#image-desktop {
+    display: none;
+}
+
+@media (min-width: 850px) {
+    body {
+       margin: 0;
+       background-color: var(--Dark-Slate-Grey);
+    }
+
+    #image-desktop {
+        display: block;
+    }
+
+    #image-mobile {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        width: 800px;
+        padding: 20px 15px;
+        border-radius: 20px;
+        margin: 10px auto 10px auto;
+        align-items: center;
+    }
+    
+    .content {
+        order: 1;  
+    }
+
+    .image-container {
+        order: 2;
+    }
+
+    .thank-you-container {
+        background-color: var(--White);
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 150px;
+        
+    }
+
+    .thank-you-container button {
+        margin-top: 20px;
+    }
+
+    .thank-you-container p {
+        font-size: 14px;
+    }
+
+    .thank-you-container img {
+        width: 45px;
+    }
+
+    .thank-you-container h1 {
+        margin: 20px auto 20px auto;
+        font-size: 50px;
+    }
+    
+}
